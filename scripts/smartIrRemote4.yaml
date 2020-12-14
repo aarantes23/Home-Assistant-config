@@ -1,0 +1,109 @@
+smartirremote4_sony_tv_power:
+  alias: smartirremote4_sony_tv_power
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret sony_tv_power
+        topic: cmnd/SmartIrRemote4/irSend
+        qos: 2
+        retain: true
+
+smartirremote4_sony_tv_source:
+  alias: smartirremote4_sony_tv_source
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret sony_tv_source
+        topic: cmnd/SmartIrRemote4/irSend
+        qos: 2
+        retain: true
+
+smartirremote4_sony_tv_up:
+  alias: smartirremote4_sony_tv_up
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret sony_tv_up
+        topic: cmnd/SmartIrRemote4/irSend
+        qos: 2
+        retain: true
+
+smartirremote4_sony_tv_down:
+  alias: smartirremote4_sony_tv_down
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret sony_tv_down
+        topic: cmnd/SmartIrRemote4/irSend
+        qos: 2
+        retain: true
+
+smartirremote4_sony_tv_left:
+  alias: smartirremote4_sony_tv_left
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret sony_tv_left
+        topic: cmnd/SmartIrRemote4/irSend
+        qos: 2
+        retain: true
+
+smartirremote4_sony_tv_right:
+  alias: smartirremote4_sony_tv_right
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret sony_tv_right
+        topic: cmnd/SmartIrRemote4/irSend
+        qos: 2
+        retain: true
+
+smartirremote4_sony_tv_ok:
+  alias: smartirremote4_sony_tv_ok
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret sony_tv_ok
+        topic: cmnd/SmartIrRemote4/irSend
+        qos: 2
+        retain: true
+
+smartirremote4_sony_tv_exit:
+  alias: smartirremote4_sony_tv_exit
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret sony_tv_exit
+        topic: cmnd/SmartIrRemote4/irSend
+        qos: 2
+        retain: true
+
+smartirremote4_sony_tv_volume_up:
+  alias: smartirremote4_sony_tv_volume_up
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret sony_tv_volume_up
+        topic: cmnd/SmartIrRemote4/irSend
+        qos: 2
+        retain: true
+
+smartirremote4_sony_tv_volume_down:
+  alias: smartirremote4_sony_tv_volume_down
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret sony_tv_volume_down
+        topic: cmnd/SmartIrRemote4/irSend
+        qos: 2
+        retain: true
+
+smartirremote4_sony_tv_mute:
+  alias: smartirremote4_sony_tv_mute
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret sony_tv_mute
+        topic: cmnd/SmartIrRemote4/irSend
+        qos: 2
+        retain: true

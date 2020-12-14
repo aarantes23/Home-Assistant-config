@@ -1,0 +1,108 @@
+
+- alias: Restart HA
+  id: restart_ha
+  trigger: 
+    platform: time
+    at: "04:00:00"  
+  action:
+    - service: homeassistant.restart
+
+- alias: When is "00:00:00" am, turn off some devices
+  id: 0000am
+  trigger:
+      platform: time
+      at: "00:00:00"
+  action:
+     - service: switch.turn_off               
+       entity_id: switch.monitor       
+     - service: switch.turn_off
+       entity_id: switch.impressora
+     - service: light.turn_off               
+       entity_id: light.abajur_quarto_marlene_1   
+     - service: light.turn_off               
+       entity_id: light.abajur_quarto_marlene_2       
+
+- alias: When is "01:30:00" am, turn off some devices
+  id: 0130am
+  trigger:
+      platform: time
+      at: "01:30:00"
+  action:
+     - service: light.turn_off               
+       entity_id: light.abajur_quarto_arthur         
+     - service: switch.turn_off
+       entity_id: switch.filtro_de_linha_tv_marlene       
+
+- alias: When the Sun rises, turn on some devices
+  id: sunrise
+  trigger:
+      platform: sun
+      event: sunrise
+  action:
+     - service: switch.turn_on               
+       entity_id: switch.monitor
+     - service: switch.turn_off               
+       entity_id: switch.ventilador_quarto_arthur  
+     - service: light.turn_off               
+       entity_id: light.spots_varanda  
+     - service: light.turn_off               
+       entity_id: light.luz_banheiro_marlene_espelho  
+
+- alias: When the Sun set, turn on the ambient lights
+  id: sunset_lights
+  trigger:
+      platform: sun
+      event: sunset
+  action:
+     - service: light.turn_on              
+       entity_id: light.spots_varanda  
+     - service: light.turn_on               
+       entity_id: light.abajur_quarto_arthur   
+     - service: light.turn_on               
+       entity_id: light.abajur_quarto_marlene_1   
+     - service: light.turn_on               
+       entity_id: light.abajur_quarto_marlene_2 
+
+- alias: on_montion_detection_banheiro_marlene
+  id: on_montion_detection_banheiro_marlene
+  trigger:
+      platform: state
+      entity_id: binary_sensor.banheiro_marlene
+      to: "on"
+  condition:
+    condition: time
+    after: '17:30:00'
+    before: '06:00:00'
+  action:
+     - service: light.turn_on              
+       entity_id: light.luz_banheiro_marlene  
+     - service: light.turn_on               
+       entity_id: light.luz_banheiro_marlene_espelho  
+
+- alias: off_montion_detection_banheiro_marlene
+  id: off_montion_detection_banheiro_marlene
+  trigger:
+      platform: state
+      entity_id: binary_sensor.banheiro_marlene
+      to: "off"
+  condition:
+    condition: time
+    after: '17:30:00'
+    before: '06:00:00'      
+  action:
+     - service: light.turn_off              
+       entity_id: light.luz_banheiro_marlene  
+     - service: light.turn_off               
+       entity_id: light.luz_banheiro_marlene_espelho                
+
+- alias: Update Available Notification
+  id: update_available_notification
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.updater
+      from: 'off'
+      to: 'on'
+  action:
+    - service: notify.notify
+      data:
+        message: "Home Assistant {{ state_attr('binary_sensor.updater', 'newest_version') }} is available."

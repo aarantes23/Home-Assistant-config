@@ -1,0 +1,237 @@
+# switch.ventilador
+- platform: mqtt
+  unique_id: switch.ventilador
+  name: "Ventilador"
+  state_topic: "stat/SmartPlug1/POWER"
+  command_topic: "cmnd/SmartPlug1/POWER"
+  availability_topic: "tele/SmartPlug1/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  icon: mdi:fan
+
+# switch.filtro_de_linha_tv_sala
+- platform: mqtt
+  unique_id: switch.filtro_de_linha_tv_sala
+  name: "Filtro de linha Tv Sala"
+  state_topic: "stat/SmartPlug2/POWER"
+  command_topic: "cmnd/SmartPlug2/POWER"
+  availability_topic: "tele/SmartPlug2/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  icon: mdi:power-socket
+
+# switch.filtro_de_linha_video_games
+- platform: mqtt
+  unique_id: switch.filtro_de_linha_video_games
+  name: "Filtro de Linha Video Games"
+  state_topic: "stat/SmartPlug3/POWER"
+  command_topic: "cmnd/SmartPlug3/POWER"
+  availability_topic: "tele/SmartPlug3/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  icon: mdi:power-socket
+
+# switch.filtro_de_linha_pc_marlene
+- platform: mqtt
+  unique_id: switch.filtro_de_linha_pc_marlene
+  name: "Filtro de linha Pc Marlene"
+  state_topic: "stat/SmartPlug4/POWER"
+  command_topic: "cmnd/SmartPlug4/POWER"
+  availability_topic: "tele/SmartPlug4/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  icon: mdi:power-socket
+
+# switch.filtro_de_linha_tv_marlene
+- platform: mqtt
+  unique_id: switch.filtro_de_linha_tv_marlene
+  name: "Filtro de linha Tv Marlene"
+  state_topic: "stat/SmartPlug5/POWER"
+  command_topic: "cmnd/SmartPlug5/POWER"
+  availability_topic: "tele/SmartPlug5/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  icon: mdi:power-socket
+
+# switch.filtro_de_linha_tv_arthur
+- platform: mqtt
+  unique_id: switch.filtro_de_linha_tv_arthur
+  name: "Filtro de linha Tv Arthur"
+  state_topic: "stat/SmartPlug6/POWER"
+  command_topic: "cmnd/SmartPlug6/POWER"
+  availability_topic: "tele/SmartPlug6/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  icon: mdi:power-socket
+
+# switch.filtro_de_linha_pc_arthur
+- platform: mqtt
+  unique_id: switch.filtro_de_linha_pc_arthur
+  name: "Filtro de linha Pc Arthur"
+  state_topic: "stat/SmartPlug7/POWER"
+  command_topic: "cmnd/SmartPlug7/POWER"
+  availability_topic: "tele/SmartPlug7/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  icon: mdi:power-socket
+
+# switch.filtro_de_linha_pc_escritorio
+- platform: mqtt
+  unique_id: switch.filtro_de_linha_pc_escritorio
+  name: "Filtro de linha Pc Escritorio"
+  state_topic: "stat/SmartPlug8/POWER"
+  command_topic: "cmnd/SmartPlug8/POWER"
+  availability_topic: "tele/SmartPlug8/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  icon: mdi:power-socket
+
+# switch.filtro_de_linha_extra_escritorio
+- platform: mqtt
+  unique_id: switch.filtro_de_linha_extra_escritorio
+  name: "Filtro de linha Extra Escritorio"
+  state_topic: "stat/SmartPlug9/POWER"
+  command_topic: "cmnd/SmartPlug9/POWER"
+  availability_topic: "tele/SmartPlug9/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  icon: mdi:power-socket
+
+# switch.impressora
+- platform: mqtt
+  unique_id: switch.impressora
+  name: "Impressora"
+  state_topic: "stat/SmartPlug10/POWER"
+  command_topic: "cmnd/SmartPlug10/POWER"
+  availability_topic: "tele/SmartPlug10/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  icon: mdi:printer
+
+# switch.monitor
+- platform: mqtt
+  unique_id: switch.monitor
+  name: "Monitor"
+  state_topic: "stat/SmartPlug11/POWER"
+  command_topic: "cmnd/SmartPlug11/POWER"
+  availability_topic: "tele/SmartPlug11/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  icon: mdi:monitor
+
+# switch.cameras
+- platform: mqtt
+  unique_id: switch.cameras
+  name: "Câmeras"
+  state_topic: "stat/SmartPlug12/POWER"
+  command_topic: "cmnd/SmartPlug12/POWER"
+  availability_topic: "tele/SmartPlug12/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  icon: mdi:cctv
+
+# switch.dvr
+- platform: mqtt
+  unique_id: switch.dvr
+  name: "DVR"
+  state_topic: "stat/SmartPlug13/POWER"
+  command_topic: "cmnd/SmartPlug13/POWER"
+  availability_topic: "tele/SmartPlug13/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  icon: mdi:cassette
+
+# switch.seagate_nas
+- platform: mqtt
+  unique_id: switch.seagate_nas
+  name: "Seagate NAS"
+  state_topic: "stat/SmartPlug14/POWER"
+  command_topic: "cmnd/SmartPlug14/POWER"
+  availability_topic: "tele/SmartPlug14/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  icon: mdi:nas
+
+# switch.docker_machine
+- platform: mqtt
+  unique_id: switch.docker_machine
+  name: "Docker Machine"
+  state_topic: "stat/SmartPlug15/POWER"
+  command_topic: "cmnd/SmartPlug15/POWER"
+  availability_topic: "tele/SmartPlug15/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  icon: mdi:docker
+
+# switch.filtro_de_linha_varanda
+- platform: mqtt
+  unique_id: switch.filtro_de_linha_varanda
+  name: "Filtro de linha Varanda"
+  state_topic: "stat/SmartPlug16/POWER"
+  command_topic: "cmnd/SmartPlug16/POWER"
+  availability_topic: "tele/SmartPlug16/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  icon: mdi:power-socket
+
+# switch.filtro_de_linha_cozinha
+- platform: mqtt
+  unique_id: switch.filtro_de_linha_cozinha
+  name: "Filtro de linha Cozinha"
+  state_topic: "stat/SmartPlug17/POWER"
+  command_topic: "cmnd/SmartPlug17/POWER"
+  availability_topic: "tele/SmartPlug17/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  icon: mdi:power-socket

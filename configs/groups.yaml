@@ -1,0 +1,94 @@
+zones:
+  name: Zones
+  entities:
+    - binary_sensor.floorplan
+
+garagem:
+    name: Garagem
+    all: true
+    entities:
+      - light.luz_garagem  
+
+quarto_visitas:
+    name: Quarto Visitas
+    all: true
+    entities:
+      - light.luz_quarto_visitas
+
+quarto_arthur:
+    name: Quarto Arthur
+    all: true
+    entities:
+      - light.luz_quarto_arthur
+      - light.abajur_quarto_arthur
+      
+sala:
+    name: Sala
+    all: true
+    entities:
+      - light.luz_sala
+
+quarto_marlene:
+    name: Quarto Marlene
+    all: true
+    entities:
+      - light.luz_quarto_marlene
+
+copa:
+    name: Copa
+    all: true
+    entities:
+      - light.luz_copa
+
+lavanderia:
+    name: Lavanderia
+    all: true
+    entities:
+      - light.luz_lavanderia
+
+cozinha:
+    name: Cozinha
+    all: true
+    entities:
+      - light.luz_cozinha
+
+escritorio:
+    name: Escritorio
+    all: true
+    entities:
+      - light.luz_escritorio
+
+quintal:
+    name: Quintal
+    all: true
+    entities:
+      - light.refletor_quintal
+      - light.refletor_corredor
+
+varanda:
+    name: Varanda
+    all: true
+    entities:
+      - light.spots_varanda
+      - light.luz_varanda
+
+filtros_de_linha:
+    name: Filtros de linha
+    all: true
+    entities:
+      - switch.filtro_de_linha_tv_sala
+      - switch.filtro_de_linha_video_games 
+      - switch.filtro_de_linha_pc_marlene
+      - switch.filtro_de_linha_tv_marlene
+      - switch.filtro_de_linha_tv_arthur
+      - switch.filtro_de_linha_pc_arthur
+      - switch.filtro_de_linha_pc_escritorio
+      - switch.filtro_de_linha_extra_escritorio
+
+rede:
+    name: Tomadas da rede
+    all: true
+    entities: 
+      - switch.monitor
+      - switch.cameras
+      - switch.dvr

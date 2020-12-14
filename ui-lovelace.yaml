@@ -1,0 +1,1111 @@
+title: 127.0.0.1
+resources:
+- url: /local/custom-lovelace/upcoming-media-card/upcoming-media-card.js?v=0.1.2
+  type: js
+- url: /local/tv-card.js?v=1
+  type: module
+
+views:
+  - title: Home 
+    theme: dark-mode
+    icon: mdi:castle
+    cards:      
+      - type: entities
+        title: Luzes 
+        entities:
+           - light.luz_garagem  
+           - light.luz_quarto_visitas
+           - light.luz_quarto_arthur  
+           - light.luz_sala   
+           - light.luz_quarto_marlene
+           - light.luz_copa   
+           - light.luz_banheiro
+           - light.luz_banheiro_marlene  
+           - light.luz_banheiro_marlene_espelho
+           - light.luz_lavanderia  
+           - light.luz_cozinha   
+           - light.luz_despensa
+           - light.luz_escritorio  
+           - light.luz_varanda                  
+           - light.refletor_quintal              
+           - light.refletor_corredor                                     
+        card:
+          type: glance
+      - type: entities
+        title: Luzes Ambiente 
+        entities:
+           - light.abajur_quarto_arthur             
+           - light.abajur_quarto_marlene_1   
+           - light.abajur_quarto_marlene_2  
+           - light.luz_lavanderia  
+           - light.spots_varanda                
+        card:
+          type: glance          
+      - type: entities
+        title: Ventiladores
+        entities:
+           - switch.ventilador                      
+        card:
+          type: glance     
+      - type: entities
+        title: Filtros de linha
+        entities:
+            - switch.filtro_de_linha_tv_sala
+            - switch.filtro_de_linha_video_games   
+            - switch.filtro_de_linha_pc_marlene
+            - switch.filtro_de_linha_tv_marlene
+            - switch.filtro_de_linha_tv_arthur
+            - switch.filtro_de_linha_pc_arthur
+            - switch.filtro_de_linha_pc_escritorio
+            - switch.filtro_de_linha_extra_escritorio    
+            - switch.filtro_de_linha_varanda
+            - switch.filtro_de_linha_cozinha                 
+        card:
+          type: glance     
+      - type: entities
+        title: Tomadas da rede
+        show_header_toggle: false
+        entities:
+            - switch.impressora
+            - switch.monitor
+            - switch.cameras
+            - switch.dvr
+            - switch.seagate_nas
+            - switch.docker_machine
+        card:
+          type: glance             
+      - type: entities                
+        title: Speed Test 
+        show_header_toggle: false
+        entities:
+           - sensor.speedtest_download
+           - sensor.speedtest_upload
+           - sensor.speedtest_ping             
+        card:
+          type: glance          
+                                  
+  - title: Cameras
+    icon: mdi:cctv
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: picture-entity
+            entity: camera.cam_01
+            aspect_ratio: 16x9
+            camera_view: live
+            tap_action:
+              action: more-info
+              service_data:
+                entity_id: camera.cam_01
+          - type: picture-entity
+            entity: camera.cam_02
+            aspect_ratio: 16x9
+            camera_view: live
+            tap_action:
+              action: more-info
+              service_data:
+                entity_id: camera.cam_02
+          - type: picture-entity
+            entity: camera.cam_03
+            aspect_ratio: 16x9
+            camera_view: live
+            tap_action:
+              action: more-info
+              service_data:
+                entity_id: camera.cam_03
+      - type: vertical-stack
+        cards:                
+          - type: picture-entity
+            entity: camera.cam_04
+            aspect_ratio: 16x9
+            camera_view: live
+            tap_action:
+              action: more-info
+              service_data:
+                entity_id: camera.cam_04
+          - type: picture-entity
+            entity: camera.cam_05
+            aspect_ratio: 16x9
+            camera_view: live
+            tap_action:
+              action: more-info
+              service_data:
+                entity_id: camera.cam_05
+          - type: picture-entity
+            entity: camera.cam_06
+            aspect_ratio: 16x9
+            camera_view: live
+            tap_action:
+              action: more-info
+              service_data:
+                entity_id: camera.cam_06
+      - type: vertical-stack
+        cards:                
+          - type: picture-entity
+            entity: camera.cam_07
+            aspect_ratio: 16x9
+            camera_view: live
+            tap_action:
+              action: more-info
+              service_data:
+                entity_id: camera.cam_07
+          - type: picture-entity
+            entity: camera.cam_08
+            aspect_ratio: 16x9
+            camera_view: live
+            tap_action:
+              action: more-info
+              service_data:
+                entity_id: camera.cam_08
+
+  - title: Power Sensors 
+    theme: dark-mode
+    icon: mdi:lightning-bolt
+    cards:      
+      - type: vertical-stack
+        title: Ventilador Quarto Arthur 
+        cards: 
+          - type: entities
+            entities:
+              - switch.ventilador                      
+              - sensor.ventilador_current_voltage
+              - sensor.ventilador_current_amps
+              - sensor.ventilador_current_power_usage            
+          - type: horizontal-stack
+            cards:
+              - type: entity
+                entity: sensor.ventilador_energy_daily
+                name: Hoje
+              - type: entity                
+                entity: sensor.ventilador_energy_weekly                
+                name: Semanal
+          - type: horizontal-stack            
+            cards:
+              - type: entity                
+                entity: sensor.ventilador_energy_monthly                
+                name: Mensal
+              - type: entity                
+                entity: sensor.ventilador_energy_yearly                
+                name: Anual
+
+      - type: vertical-stack
+        title: Filtro de linha Tv Sala
+        cards: 
+          - type: entities
+            entities:
+              - switch.filtro_de_linha_tv_sala                      
+              - sensor.filtro_de_linha_tv_sala_current_voltage
+              - sensor.filtro_de_linha_tv_sala_current_amps
+              - sensor.filtro_de_linha_tv_sala_current_power_usage                          
+          - type: horizontal-stack
+            cards:
+              - type: entity
+                entity: sensor.filtro_de_linha_tv_sala_energy_daily
+                name: Hoje
+              - type: entity                
+                entity: sensor.filtro_de_linha_tv_sala_energy_weekly                
+                name: Semanal
+          - type: horizontal-stack            
+            cards:
+              - type: entity                
+                entity: sensor.filtro_de_linha_tv_sala_energy_monthly                
+                name: Mensal
+              - type: entity                
+                entity: sensor.filtro_de_linha_tv_sala_energy_yearly                
+                name: Anual
+
+      - type:  vertical-stack
+        title: Filtro de Linha Video Games         
+        cards: 
+          - type: entities
+            entities:
+              - switch.filtro_de_linha_video_games                      
+              - sensor.filtro_de_linha_video_games_current_voltage
+              - sensor.filtro_de_linha_video_games_current_amps
+              - sensor.filtro_de_linha_video_games_current_power_usage            
+          - type: horizontal-stack
+            cards:
+              - type: entity
+                entity: sensor.filtro_de_linha_video_games_energy_daily
+                name: Hoje
+              - type: entity                
+                entity: sensor.filtro_de_linha_video_games_energy_weekly                
+                name: Semanal
+          - type: horizontal-stack            
+            cards:
+              - type: entity                
+                entity: sensor.filtro_de_linha_video_games_energy_monthly                
+                name: Mensal
+              - type: entity                
+                entity: sensor.filtro_de_linha_video_games_energy_yearly                
+                name: Anual
+
+      - type: vertical-stack
+        title: Filtro de linha Pc Marlene
+        cards: 
+          - type: entities
+            entities:
+              - switch.filtro_de_linha_pc_marlene                      
+              - sensor.filtro_de_linha_pc_marlene_current_voltage
+              - sensor.filtro_de_linha_pc_marlene_current_amps
+              - sensor.filtro_de_linha_pc_marlene_current_power_usage            
+          - type: horizontal-stack
+            cards:
+              - type: entity
+                entity: sensor.filtro_de_linha_pc_marlene_energy_daily
+                name: Hoje
+              - type: entity                
+                entity: sensor.filtro_de_linha_pc_marlene_energy_weekly                
+                name: Semanal
+          - type: horizontal-stack            
+            cards:
+              - type: entity                
+                entity: sensor.filtro_de_linha_pc_marlene_energy_monthly                
+                name: Mensal
+              - type: entity                
+                entity: sensor.filtro_de_linha_pc_marlene_energy_yearly                
+                name: Anual
+
+      - type: vertical-stack
+        title: Filtro de linha Tv Marlene
+        cards: 
+          - type: entities
+            entities:
+              - switch.filtro_de_linha_tv_marlene                      
+              - sensor.filtro_de_linha_tv_marlene_current_voltage
+              - sensor.filtro_de_linha_tv_marlene_current_amps
+              - sensor.filtro_de_linha_tv_marlene_current_power_usage            
+          - type: horizontal-stack
+            cards:
+              - type: entity
+                entity: sensor.filtro_de_linha_tv_marlene_energy_daily
+                name: Hoje
+              - type: entity                
+                entity: sensor.filtro_de_linha_tv_marlene_energy_weekly                
+                name: Semanal
+          - type: horizontal-stack            
+            cards:
+              - type: entity                
+                entity: sensor.filtro_de_linha_tv_marlene_energy_monthly                
+                name: Mensal
+              - type: entity                
+                entity: sensor.filtro_de_linha_tv_marlene_energy_yearly                
+                name: Anual
+
+      - type: vertical-stack
+        title: Filtro de linha Tv Arthur
+        cards: 
+          - type: entities
+            entities:
+              - switch.filtro_de_linha_tv_arthur                      
+              - sensor.filtro_de_linha_tv_arthur_current_voltage
+              - sensor.filtro_de_linha_tv_arthur_current_amps
+              - sensor.filtro_de_linha_tv_arthur_current_power_usage            
+          - type: horizontal-stack
+            cards:
+              - type: entity
+                entity: sensor.filtro_de_linha_tv_arthur_energy_daily
+                name: Hoje
+              - type: entity                
+                entity: sensor.filtro_de_linha_tv_arthur_energy_weekly                
+                name: Semanal
+          - type: horizontal-stack            
+            cards:
+              - type: entity                
+                entity: sensor.filtro_de_linha_tv_arthur_energy_monthly                
+                name: Mensal
+              - type: entity                
+                entity: sensor.filtro_de_linha_tv_arthur_energy_yearly                
+                name: Anual
+
+      - type: vertical-stack
+        title: Filtro de linha Pc Arthur
+        cards: 
+          - type: entities
+            entities:
+              - switch.filtro_de_linha_pc_arthur                      
+              - sensor.filtro_de_linha_pc_arthur_current_voltage
+              - sensor.filtro_de_linha_pc_arthur_current_amps
+              - sensor.filtro_de_linha_pc_arthur_current_power_usage            
+          - type: horizontal-stack
+            cards:
+              - type: entity
+                entity: sensor.filtro_de_linha_pc_arthur_energy_daily
+                name: Hoje
+              - type: entity                
+                entity: sensor.filtro_de_linha_pc_arthur_energy_weekly                
+                name: Semanal
+          - type: horizontal-stack            
+            cards:
+              - type: entity                
+                entity: sensor.filtro_de_linha_pc_arthur_energy_monthly                
+                name: Mensal
+              - type: entity                
+                entity: sensor.filtro_de_linha_pc_arthur_energy_yearly                
+                name: Anual
+
+      - type: vertical-stack
+        title: Filtro de linha Pc Escritorio
+        cards: 
+          - type: entities
+            entities:
+              - switch.filtro_de_linha_pc_escritorio                      
+              - sensor.filtro_de_linha_pc_escritorio_current_voltage
+              - sensor.filtro_de_linha_pc_escritorio_current_amps
+              - sensor.filtro_de_linha_pc_escritorio_current_power_usage            
+          - type: horizontal-stack
+            cards:
+              - type: entity
+                entity: sensor.filtro_de_linha_pc_escritorio_energy_daily
+                name: Hoje
+              - type: entity                
+                entity: sensor.filtro_de_linha_pc_escritorio_energy_weekly                
+                name: Semanal
+          - type: horizontal-stack            
+            cards:
+              - type: entity                
+                entity: sensor.filtro_de_linha_pc_escritorio_energy_monthly                
+                name: Mensal
+              - type: entity                
+                entity: sensor.filtro_de_linha_pc_escritorio_energy_yearly                
+                name: Anual
+
+      - type: vertical-stack
+        title: Filtro de linha Escritorio
+        cards: 
+          - type: entities
+            entities:
+              - switch.filtro_de_linha_extra_escritorio                      
+              - sensor.filtro_de_linha_extra_escritorio_current_voltage
+              - sensor.filtro_de_linha_extra_escritorio_current_amps
+              - sensor.filtro_de_linha_extra_escritorio_current_power_usage            
+          - type: horizontal-stack
+            cards:
+              - type: entity
+                entity: sensor.filtro_de_linha_extra_escritorio_energy_daily
+                name: Hoje
+              - type: entity                
+                entity: sensor.filtro_de_linha_extra_escritorio_energy_weekly                
+                name: Semanal
+          - type: horizontal-stack            
+            cards:
+              - type: entity                
+                entity: sensor.filtro_de_linha_extra_escritorio_energy_monthly                
+                name: Mensal
+              - type: entity                
+                entity: sensor.filtro_de_linha_extra_escritorio_energy_yearly                
+                name: Anual
+
+      - type: vertical-stack
+        title: Impressora
+        cards: 
+          - type: entities
+            entities:
+              - switch.impressora                      
+              - sensor.impressora_current_voltage
+              - sensor.impressora_current_amps
+              - sensor.impressora_current_power_usage            
+          - type: horizontal-stack
+            cards:
+              - type: entity
+                entity: sensor.impressora_energy_daily
+                name: Hoje
+              - type: entity                
+                entity: sensor.impressora_energy_weekly                
+                name: Semanal
+          - type: horizontal-stack            
+            cards:
+              - type: entity                
+                entity: sensor.impressora_energy_monthly                
+                name: Mensal
+              - type: entity                
+                entity: sensor.impressora_energy_yearly                
+                name: Anual
+
+      - type: vertical-stack
+        title: Monitor
+        cards: 
+          - type: entities
+            entities:
+              - switch.monitor                      
+              - sensor.monitor_current_voltage
+              - sensor.monitor_current_amps
+              - sensor.monitor_current_power_usage            
+          - type: horizontal-stack
+            cards:
+              - type: entity
+                entity: sensor.monitor_energy_daily
+                name: Hoje
+              - type: entity                
+                entity: sensor.monitor_energy_weekly                
+                name: Semanal
+          - type: horizontal-stack            
+            cards:
+              - type: entity                
+                entity: sensor.monitor_energy_monthly                
+                name: Mensal
+              - type: entity                
+                entity: sensor.monitor_energy_yearly                
+                name: Anual
+
+      - type: vertical-stack
+        title: Câmeras
+        cards: 
+          - type: entities
+            entities:
+              - switch.cameras                      
+              - sensor.cameras_current_voltage
+              - sensor.cameras_current_amps
+              - sensor.cameras_current_power_usage            
+          - type: horizontal-stack
+            cards:
+              - type: entity
+                entity: sensor.cameras_energy_daily
+                name: Hoje
+              - type: entity                
+                entity: sensor.cameras_energy_weekly                
+                name: Semanal
+          - type: horizontal-stack            
+            cards:
+              - type: entity                
+                entity: sensor.cameras_energy_monthly                
+                name: Mensal
+              - type: entity                
+                entity: sensor.cameras_energy_yearly                
+                name: Anual
+
+      - type: vertical-stack
+        title: DVR
+        cards: 
+          - type: entities
+            entities:
+              - switch.dvr                      
+              - sensor.dvr_current_voltage
+              - sensor.dvr_current_amps
+              - sensor.dvr_current_power_usage            
+          - type: horizontal-stack
+            cards:
+              - type: entity
+                entity: sensor.dvr_energy_daily
+                name: Hoje
+              - type: entity                
+                entity: sensor.dvr_energy_weekly                
+                name: Semanal
+          - type: horizontal-stack            
+            cards:
+              - type: entity                
+                entity: sensor.dvr_energy_monthly                
+                name: Mensal
+              - type: entity                
+                entity: sensor.dvr_energy_yearly                
+                name: Anual
+      
+      - type: vertical-stack
+        title: Seagate NAS
+        cards: 
+          - type: entities
+            entities:
+              - switch.seagate_nas                      
+              - sensor.seagate_nas_current_voltage
+              - sensor.seagate_nas_current_amps
+              - sensor.seagate_nas_current_power_usage               
+          - type: horizontal-stack
+            cards:
+              - type: entity
+                entity: sensor.seagate_nas_energy_daily
+                name: Hoje
+              - type: entity                
+                entity: sensor.seagate_nas_energy_weekly                
+                name: Semanal
+          - type: horizontal-stack            
+            cards:
+              - type: entity                
+                entity: sensor.seagate_nas_energy_monthly                
+                name: Mensal
+              - type: entity                
+                entity: sensor.seagate_nas_energy_yearly                
+                name: Anual
+
+      - type: vertical-stack
+        title: Docker Machine
+        cards: 
+          - type: entities
+            entities:
+              - switch.docker_machine
+              - sensor.docker_machine_current_voltage
+              - sensor.docker_machine_current_amps              
+              - sensor.docker_machine_current_power_usage                     
+          - type: horizontal-stack
+            cards:
+              - type: entity
+                entity: sensor.docker_machine_energy_daily
+                name: Hoje
+              - type: entity                
+                entity: sensor.docker_machine_energy_weekly                
+                name: Semanal
+          - type: horizontal-stack            
+            cards:
+              - type: entity                
+                entity: sensor.docker_machine_energy_monthly                
+                name: Mensal
+              - type: entity                
+                entity: sensor.docker_machine_energy_yearly                
+                name: Anual
+      
+      - type: vertical-stack
+        title: Filtro de linha Varanda
+        cards: 
+          - type: entities
+            entities:
+              - switch.filtro_de_linha_varanda
+              - sensor.filtro_de_linha_varanda_current_voltage
+              - sensor.filtro_de_linha_varanda_current_amps
+              - sensor.filtro_de_linha_varanda_current_power_usage               
+              - sensor.filtro_de_linha_varanda_todays_power
+              - sensor.filtro_de_linha_varanda_total_power
+              - sensor.filtro_de_linha_varanda_yesterdays_power
+          - type: horizontal-stack
+            cards:
+              - type: entity
+                entity: sensor.filtro_de_linha_varanda_energy_daily
+                name: Hoje
+              - type: entity                
+                entity: sensor.filtro_de_linha_varanda_energy_weekly                
+                name: Semanal
+          - type: horizontal-stack            
+            cards:
+              - type: entity                
+                entity: sensor.filtro_de_linha_varanda_energy_monthly                
+                name: Mensal
+              - type: entity                
+                entity: sensor.filtro_de_linha_varanda_energy_yearly                
+                name: Anual
+          
+      - type: vertical-stack
+        title: Filtro de linha Cozinha
+        cards: 
+          - type: entities
+            entities:
+              - switch.filtro_de_linha_cozinha
+              - sensor.filtro_de_linha_cozinha_current_voltage
+              - sensor.filtro_de_linha_cozinha_current_amps
+              - sensor.filtro_de_linha_cozinha_current_power_usage               
+              - sensor.filtro_de_linha_cozinha_todays_power
+              - sensor.filtro_de_linha_cozinha_total_power
+              - sensor.filtro_de_linha_cozinha_yesterdays_power
+          - type: horizontal-stack
+            cards:
+              - type: entity
+                entity: sensor.filtro_de_linha_cozinha_energy_daily
+                name: Hoje
+              - type: entity                
+                entity: sensor.filtro_de_linha_cozinha_energy_weekly                
+                name: Semanal
+          - type: horizontal-stack            
+            cards:
+              - type: entity                
+                entity: sensor.filtro_de_linha_cozinha_energy_monthly                
+                name: Mensal
+              - type: entity                
+                entity: sensor.filtro_de_linha_cozinha_energy_yearly                
+                name: Anual
+
+  - title: Sensors 
+    theme: dark-mode
+    icon: mdi:contactless-payment
+    cards: 
+      - type: entities
+        title: Motion Sensors
+        entities:
+          - entity: binary_sensor.banheiro_marlene
+            secondary_info: 
+              entity-id: sensor.bateria_banheiro_marlene  
+        card:
+          type: glance                                            
+      - type: entities
+        title: Open/Close Sensors
+        entities:
+          - binary_sensor.janela_copa
+        card:
+          type: glance
+      - type: entities
+        title: Batteries
+        entities:
+          - sensor.bateria_banheiro_marlene  
+          - sensor.bateria_janela_copa                                 
+        card:
+          type: glance
+
+  - title: Remotes
+    theme: dark-mode
+    icon: mdi:remote-tv    
+    cards:
+      - type: vertical-stack 
+        cards:       
+        - type: custom:tv-card  
+          entity: sun.sun
+          name: Sala TV
+          tv: true
+          power:                           
+            action: call-service
+            service: script.smartirremote1_samsung_tv_power     
+          volume_mute:
+            action: call-service
+            service: script.smartirremote1_samsung_home_theater_volume_mute
+          volume_up:          
+            action: call-service
+            service: script.smartirremote1_samsung_home_theater_volume_up  
+          volume_down:          
+            action: call-service
+            service: script.smartirremote1_samsung_home_theater_volume_down                                                                       
+          home:
+            action: call-service
+            service: script.smartirremote1_samsung_tv_home                                                                       
+          back:
+            action: call-service
+            service: script.smartirremote1_samsung_tv_back
+          play:
+            action: call-service
+            service: script.smartirremote1_samsung_tv_play
+          select:            
+            action: call-service
+            service: script.smartirremote1_samsung_tv_confirm
+          up:
+            action: call-service
+            service: script.smartirremote1_samsung_tv_up
+          down:
+            action: call-service
+            service: script.smartirremote1_samsung_tv_down 
+          right: 
+            action: call-service
+            service: script.smartirremote1_samsung_tv_right       
+          left:
+            action: call-service
+            service: script.smartirremote1_samsung_tv_left 
+        - type: horizontal-stack
+          cards:
+            - type: button    
+              name: Tomada Tv Sala
+              show_state: false              
+              entity: switch.filtro_de_linha_tv_sala                      
+            - type: button    
+              name: OiTv Power
+              show_state: false
+              icon: mdi:cassette
+              tap_action:
+                action: call-service
+                service:  script.smartirremote1_oitv_power
+            - type: button    
+              name: Home Theater Power
+              show_state: false
+              icon: mdi:cassette
+              tap_action:
+                action: call-service
+                service:  script.smartirremote1_samsung_home_theater_power
+      - type: vertical-stack 
+        cards:       
+        - type: custom:tv-card  
+          entity: sun.sun
+          name: Arthur TV
+          tv: true
+          power:                           
+            action: call-service
+            service: script.smartirremote2_samsung_tv_power     
+          volume_mute:
+            action: call-service
+            service: script.smartirremote2_samsung_soundbar_mute
+          volume_up:          
+            action: call-service
+            service: script.smartirremote2_samsung_soundbar_volume_up  
+          volume_down:          
+            action: call-service
+            service: script.smartirremote2_samsung_soundbar_volume_down                                                                       
+          home:
+            action: call-service
+            service: script.smartirremote2_samsung_tv_home                                                                       
+          back:
+            action: call-service
+            service: script.smartirremote2_samsung_tv_back
+          play:
+            action: call-service
+            service: script.smartirremote2_samsung_tv_play
+          select:            
+            action: call-service
+            service: script.smartirremote2_samsung_tv_confirm
+          up:
+            action: call-service
+            service: script.smartirremote2_samsung_tv_up
+          down:
+            action: call-service
+            service: script.smartirremote2_samsung_tv_down 
+          right: 
+            action: call-service
+            service: script.smartirremote2_samsung_tv_right       
+          left:
+            action: call-service
+            service: script.smartirremote2_samsung_tv_left 
+        - type: horizontal-stack
+          cards:
+            - type: button    
+              name: Tomada Tv Arthur
+              show_state: false              
+              entity: switch.filtro_de_linha_tv_arthur   
+            - type: button    
+              name: OiTv Power
+              show_state: false
+              icon: mdi:cassette
+              tap_action:
+                action: call-service
+                service:  script.smartirremote2_oitv_power
+            - type: button    
+              name: Soundbar Power
+              show_state: false
+              icon: mdi:cassette
+              tap_action:
+                action: call-service
+                service:  script.smartirremote2_samsung_soundbar_power
+      - type: vertical-stack 
+        cards:                
+        - type: custom:tv-card  
+          entity: sun.sun
+          name: Marlene TV
+          tv: true
+          power:                           
+            action: call-service
+            service: script.smartirremote3_lg_tv_power     
+          volume_mute:
+            action: call-service
+            service: script.smartirremote3_lg_tv_mute
+          volume_up:          
+            action: call-service
+            service: script.smartirremote3_lg_tv_volume_up  
+          volume_down:          
+            action: call-service
+            service: script.smartirremote3_lg_tv_volume_down                                                                       
+          home:
+            action: call-service
+            service: script.smartirremote3_lg_tv_apps        
+          source:
+            action: call-service
+            service: script.smartirremote3_lg_tv_source                                                                            
+          back:
+            action: call-service
+            service: script.smartirremote3_lg_tv_back
+          play:
+            action: call-service
+            service: script.smartirremote3_lg_tv_ok            
+          select:            
+            action: call-service
+            service: script.smartirremote3_lg_tv_ok
+          up:
+            action: call-service
+            service: script.smartirremote3_lg_tv_up
+          down:
+            action: call-service
+            service: script.smartirremote3_lg_tv_right 
+          right: 
+            action: call-service
+            service: script.smartirremote1_samsung_tv_right       
+          left:
+            action: call-service
+            service: script.smartirremote3_lg_tv_left 
+        - type: horizontal-stack
+          cards:
+            - type: button    
+              name: Tomada Tv Marlene
+              show_state: false              
+              entity: switch.filtro_de_linha_tv_marlene          
+            - type: button    
+              name: OiTv Power
+              show_state: false
+              icon: mdi:cassette
+              tap_action:
+                action: call-service
+                service:  script.smartirremote3_oitv_power
+            - type: button    
+              name: Tv Power
+              show_state: false
+              icon: mdi:remote-tv
+              tap_action:
+                action: call-service
+                service:  script.smartirremote3_lg_tv_power        
+      - type: custom:tv-card  
+        entity: sun.sun
+        name: Marlene OiTv
+        tv: true
+        power:                           
+          action: call-service
+          service: script.smartirremote3_oitv_power     
+        volume_mute:
+          action: call-service
+          service: script.smartirremote3_oitv_mute
+        volume_up:          
+          action: call-service
+          service: script.smartirremote3_oitv_volume_up  
+        volume_down:          
+          action: call-service
+          service: script.smartirremote3_oitv_volume_down                                                                       
+        home:
+          action: call-service
+          service: script.smartirremote3_oitv_oi        
+        menu:
+          action: call-service
+          service: script.smartirremote3_oitv_menu                                                                            
+        back:
+          action: call-service
+          service: script.smartirremote3_oitv_back
+        select:            
+          action: call-service
+          service: script.smartirremote3_oitv_ok
+        up:
+          action: call-service
+          service: script.smartirremote3_oitv_up
+        down:
+          action: call-service
+          service: script.smartirremote3_oitv_down 
+        right: 
+          action: call-service
+          service: script.smartirremote3_oitv_right       
+        left:
+          action: call-service
+          service: script.smartirremote3_oitv_left 
+      - type: vertical-stack 
+        cards:       
+        - type: custom:tv-card  
+          entity: sun.sun
+          name: Cozinha TV
+          tv: true
+          power:                           
+            action: call-service
+            service: script.smartirremote4_sony_tv_power     
+          volume_mute:
+            action: call-service
+            service: script.smartirremote4_sony_tv_mute
+          volume_up:          
+            action: call-service
+            service: script.smartirremote4_sony_tv_volume_up  
+          volume_down:          
+            action: call-service
+            service: script.smartirremote4_sony_tv_volume_down                                                                       
+          source:
+            action: call-service
+            service: script.smartirremote4_sony_tv_source                                                                       
+          back:
+            action: call-service
+            service: script.smartirremote4_sony_tv_exit
+          select:            
+            action: call-service
+            service: script.smartirremote4_sony_tv_ok
+          up:
+            action: call-service
+            service: script.smartirremote4_sony_tv_up
+          down:
+            action: call-service
+            service: script.smartirremote4_sony_tv_down 
+          right: 
+            action: call-service
+            service: script.smartirremote4_sony_tv_right       
+          left:
+            action: call-service
+            service: script.smartirremote4_sony_tv_left                              
+      - type: custom:tv-card  
+        entity: sun.sun
+        name: Escritório TV
+        tv: true
+        power:                           
+          action: call-service
+          service: script.smartirremote5_philips_tv_power     
+        volume_mute:
+          action: call-service
+          service: script.smartirremote5_philips_tv_volume_mute
+        volume_up:          
+          action: call-service
+          service: script.smartirremote5_philips_tv_volume_up  
+        volume_down:          
+          action: call-service
+          service: script.smartirremote5_philips_tv_volume_down                                                                       
+        source:
+          action: call-service
+          service: script.smartirremote5_philips_tv_source
+        back:
+          action: call-service
+          service: script.smartirremote5_philips_tv_back
+        select:            
+          action: call-service
+          service: script.smartirremote5_philips_tv_ok
+        up:
+          action: call-service
+          service: script.smartirremote5_philips_tv_up
+        down:
+          action: call-service
+          service: script.smartirremote5_philips_tv_down 
+        right: 
+          action: call-service
+          service: script.smartirremote5_philips_tv_right       
+        left:
+          action: call-service
+          service: script.smartirremote5_philips_tv_left 
+
+  - title: Weather 
+    icon: mdi:weather-partly-cloudy
+    cards:
+      - type: entities
+        title: Sun
+        entities:
+            - sun.sun            
+        card:
+          type: glance      
+      - type: weather-forecast
+        entity: weather.dark_sky
+      - type: entities
+        title: Dark sky Sensor
+        entities:
+            - sensor.dark_sky_cloud_coverage
+            - sensor.dark_sky_daily_summary
+            - sensor.dark_sky_hourly_summary
+            - sensor.dark_sky_humidity
+            - sensor.dark_sky_nearest_storm_distance
+            - sensor.dark_sky_pressure
+            - sensor.dark_sky_temperature           
+            - sensor.dark_sky_uv_index
+            - sensor.dark_sky_wind_speed
+        card:
+          type: glance            
+
+  - title: Server 
+    icon: mdi:server-network
+    cards:      
+      - type: custom:upcoming-media-card
+        entity: sensor.sonarr_upcoming_media
+        title: Next Episodes
+        max: 5        
+        image_style: fanart            
+      - entities:
+          - sensor.speedtest_download
+          - sensor.speedtest_ping
+          - sensor.speedtest_upload
+        type: history-graph
+        title: Speed Test History      
+      - type: entities
+        title: qBittorrent 
+        show_header_toggle: false
+        entities:
+           - sensor.qbittorrent_status
+           - sensor.qbittorrent_down_speed
+           - sensor.qbittorrent_up_speed
+        card:
+          type: glance
+      - type: entities                
+        title: Radarr 
+        show_header_toggle: false
+        entities:
+           - sensor.radarr_disk_space
+           - sensor.radarr_movies   
+           - sensor.radarr_status
+           - sensor.radarr_upcoming              
+        card:
+          type: glance
+      - type: entities                
+        title: Sonarr 
+        show_header_toggle: false
+        entities:
+           - sensor.sonarr_upcoming       
+        card:
+          type: glance
+      - type: custom:upcoming-media-card
+        entity: sensor.radarr_upcoming_media
+        title: Next Movies
+        max: 5       
+        image_style: poster
+        hide_empty: true  
+
+      - type: entities                
+        title: Printer
+        show_header_toggle: false
+        entities:
+           - switch.impressora
+           - sensor.samsung_scx_3400
+           - sensor.samsung_scx_3400_toner_black                              
+        card:
+          type: glance
+      
+  - title: System Monitor  
+    icon: mdi:memory
+    cards:    
+      - type: entities                
+        title: Certificates
+        show_header_toggle: false
+        entities:
+          - sensor.cert_expiry
+          - sensor.cert_expiry_timestamp
+        card:
+          type: glance                 
+      - type: entities                
+        title: Boot
+        show_header_toggle: false
+        entities:
+          - sensor.last_boot
+        card:
+          type: glance    
+      - type: entities                
+        title: Power Status
+        show_header_toggle: false
+        entities:
+          - binary_sensor.rpi_power_status
+        card:
+          type: glance              
+      - type: entities                
+        title: Disk 
+        show_header_toggle: false
+        entities:
+           - sensor.disk_use_percent
+           - sensor.disk_use   
+           - sensor.disk_free
+        card:
+          type: glance
+      - type: entities                
+        title: Swap
+        show_header_toggle: false
+        entities:
+          - sensor.swap_use_percent
+          - sensor.swap_use
+          - sensor.swap_free
+        card:
+          type: glance
+      - type: entities                
+        title: Memory
+        show_header_toggle: false
+        entities:
+          - sensor.memory_use_percent
+          - sensor.memory_use
+          - sensor.memory_free
+        card:
+          type: glance
+      - type: entities                
+        title: Processor
+        show_header_toggle: false
+        entities:
+          - sensor.processor_use
+          - sensor.process_octave_cli
+          - sensor.load_1m
+          - sensor.load_5m
+          - sensor.load_15m
+        card:
+          type: glance
+      
+  - title: Automations
+    icon: mdi:robot
+    cards:      
+      - type: entities
+        title: Automations 
+        entities:
+           - automation.0000am 
+           - automation.0130am
+           - automation.sunrise  
+           - automation.sunset_lights  
+           - automation.restart_ha   
+           - automation.on_montion_detection_banheiro_marlene
+           - automation.off_montion_detection_banheiro_marlene            
+           - automation.update_available_notification                                              
+        card:
+          type: glance

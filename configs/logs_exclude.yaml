@@ -1,0 +1,11 @@
+domains:
+  - camera
+  - zones     
+entity_globs:
+  - script.smartirremote*
+  - sensor.arthurs_ipad*
+  - sensor.arthur_ipad*
+  - device_tracker.arthur_ipad*
+  - sensor.qbittorrent*
+  - sensor.radarr*
+  - sensor.sonarr*

@@ -1,0 +1,237 @@
+# sensor.ventilador_todays_power
+ventilador_energy_daily:  
+  source: sensor.ventilador_todays_power
+  cycle: daily
+ventilador_energy_weekly:  
+  source: sensor.ventilador_todays_power
+  cycle: weekly
+ventilador_energy_monthly:  
+  source: sensor.ventilador_todays_power
+  cycle: monthly
+ventilador_energy_yearly:  
+  source: sensor.ventilador_todays_power
+  cycle: yearly
+
+# sensor.filtro_de_linha_tv_sala_todays_power
+filtro_de_linha_tv_sala_energy_daily:  
+  source: sensor.filtro_de_linha_tv_sala_todays_power
+  cycle: daily
+filtro_de_linha_tv_sala_energy_weekly:  
+  source: sensor.filtro_de_linha_tv_sala_todays_power
+  cycle: weekly
+filtro_de_linha_tv_sala_energy_monthly:  
+  source: sensor.filtro_de_linha_tv_sala_todays_power
+  cycle: monthly
+filtro_de_linha_tv_sala_energy_yearly:  
+  source: sensor.filtro_de_linha_tv_sala_todays_power
+  cycle: yearly
+
+# sensor.filtro_de_linha_video_games_todays_power
+filtro_de_linha_video_games_energy_daily:  
+  source: sensor.filtro_de_linha_video_games_todays_power
+  cycle: daily
+filtro_de_linha_video_games_energy_weekly:  
+  source: sensor.filtro_de_linha_video_games_todays_power
+  cycle: weekly
+filtro_de_linha_video_games_energy_monthly:  
+  source: sensor.filtro_de_linha_video_games_todays_power
+  cycle: monthly
+filtro_de_linha_video_games_energy_yearly:  
+  source: sensor.filtro_de_linha_video_games_todays_power
+  cycle: yearly
+
+# sensor.filtro_de_linha_pc_marlene_todays_power
+filtro_de_linha_pc_marlene_energy_daily:  
+  source: sensor.filtro_de_linha_pc_marlene_todays_power
+  cycle: daily
+filtro_de_linha_pc_marlene_energy_weekly:  
+  source: sensor.filtro_de_linha_pc_marlene_todays_power
+  cycle: weekly
+filtro_de_linha_pc_marlene_energy_monthly:  
+  source: sensor.filtro_de_linha_pc_marlene_todays_power
+  cycle: monthly
+filtro_de_linha_pc_marlene_energy_yearly:  
+  source: sensor.filtro_de_linha_pc_marlene_todays_power
+  cycle: yearly
+
+# sensor.filtro_de_linha_tv_marlene_todays_power
+filtro_de_linha_tv_marlene_energy_daily:  
+  source: sensor.filtro_de_linha_tv_marlene_todays_power
+  cycle: daily
+filtro_de_linha_tv_marlene_energy_weekly:  
+  source: sensor.filtro_de_linha_tv_marlene_todays_power
+  cycle: weekly
+filtro_de_linha_tv_marlene_energy_monthly:  
+  source: sensor.filtro_de_linha_tv_marlene_todays_power
+  cycle: monthly
+filtro_de_linha_tv_marlene_energy_yearly:  
+  source: sensor.filtro_de_linha_tv_marlene_todays_power
+  cycle: yearly
+
+# sensor.filtro_de_linha_tv_arthur_todays_power
+filtro_de_linha_tv_arthur_energy_daily:  
+  source: sensor.filtro_de_linha_tv_arthur_todays_power
+  cycle: daily
+filtro_de_linha_tv_arthur_energy_weekly:  
+  source: sensor.filtro_de_linha_tv_arthur_todays_power
+  cycle: weekly
+filtro_de_linha_tv_arthur_energy_monthly:  
+  source: sensor.filtro_de_linha_tv_arthur_todays_power
+  cycle: monthly
+filtro_de_linha_tv_arthur_energy_yearly:  
+  source: sensor.filtro_de_linha_tv_arthur_todays_power
+  cycle: yearly
+
+# sensor.filtro_de_linha_pc_arthur_todays_power
+filtro_de_linha_pc_arthur_energy_daily:  
+  source: sensor.filtro_de_linha_pc_arthur_todays_power
+  cycle: daily
+filtro_de_linha_pc_arthur_energy_weekly:  
+  source: sensor.filtro_de_linha_pc_arthur_todays_power
+  cycle: weekly
+filtro_de_linha_pc_arthur_energy_monthly:  
+  source: sensor.filtro_de_linha_pc_arthur_todays_power
+  cycle: monthly
+filtro_de_linha_pc_arthur_energy_yearly:  
+  source: sensor.filtro_de_linha_pc_arthur_todays_power
+  cycle: yearly
+
+# sensor.filtro_de_linha_pc_escritorio_todays_power
+filtro_de_linha_pc_escritorio_energy_daily:  
+  source: sensor.filtro_de_linha_pc_escritorio_todays_power
+  cycle: daily
+filtro_de_linha_pc_escritorio_energy_weekly:  
+  source: sensor.filtro_de_linha_pc_escritorio_todays_power
+  cycle: weekly
+filtro_de_linha_pc_escritorio_energy_monthly:  
+  source: sensor.filtro_de_linha_pc_escritorio_todays_power
+  cycle: monthly
+filtro_de_linha_pc_escritorio_energy_yearly:  
+  source: sensor.filtro_de_linha_pc_escritorio_todays_power
+  cycle: yearly
+
+# sensor.filtro_de_linha_extra_escritorio_todays_power
+filtro_de_linha_extra_escritorio_energy_daily:  
+  source: sensor.filtro_de_linha_extra_escritorio_todays_power
+  cycle: daily
+filtro_de_linha_extra_escritorio_energy_weekly:  
+  source: sensor.filtro_de_linha_extra_escritorio_todays_power
+  cycle: weekly
+filtro_de_linha_extra_escritorio_energy_monthly:  
+  source: sensor.filtro_de_linha_extra_escritorio_todays_power
+  cycle: monthly
+filtro_de_linha_extra_escritorio_energy_yearly:  
+  source: sensor.filtro_de_linha_extra_escritorio_todays_power
+  cycle: yearly
+
+# sensor.impressora_todays_power
+impressora_energy_daily:  
+  source: sensor.impressora_todays_power
+  cycle: daily
+impressora_energy_weekly:  
+  source: sensor.impressora_todays_power
+  cycle: weekly
+impressora_energy_monthly:  
+  source: sensor.impressora_todays_power
+  cycle: monthly
+impressora_energy_yearly:  
+  source: sensor.impressora_todays_power
+  cycle: yearly
+
+# sensor.monitor_todays_power
+monitor_energy_daily:  
+  source: sensor.monitor_todays_power
+  cycle: daily
+monitor_energy_weekly:  
+  source: sensor.monitor_todays_power
+  cycle: weekly
+monitor_energy_monthly:  
+  source: sensor.monitor_todays_power
+  cycle: monthly
+monitor_energy_yearly:  
+  source: sensor.monitor_todays_power
+  cycle: yearly
+
+# sensor.cameras_todays_power
+cameras_energy_daily:  
+  source: sensor.cameras_todays_power
+  cycle: daily
+cameras_energy_weekly:  
+  source: sensor.cameras_todays_power
+  cycle: weekly
+cameras_energy_monthly:  
+  source: sensor.cameras_todays_power
+  cycle: monthly
+cameras_energy_yearly:  
+  source: sensor.cameras_todays_power
+  cycle: yearly
+
+# sensor.dvr_todays_power
+dvr_energy_daily:  
+  source: sensor.dvr_todays_power
+  cycle: daily
+dvr_energy_weekly:  
+  source: sensor.dvr_todays_power
+  cycle: weekly
+dvr_energy_monthly:  
+  source: sensor.dvr_todays_power
+  cycle: monthly
+dvr_energy_yearly:  
+  source: sensor.dvr_todays_power
+  cycle: yearly
+
+# sensor.seagate_nas_todays_power
+seagate_nas_energy_daily:  
+  source: sensor.seagate_nas_todays_power
+  cycle: daily
+seagate_nas_energy_weekly:  
+  source: sensor.seagate_nas_todays_power
+  cycle: weekly
+seagate_nas_energy_monthly:  
+  source: sensor.seagate_nas_todays_power
+  cycle: monthly
+seagate_nas_energy_yearly:  
+  source: sensor.seagate_nas_todays_power
+  cycle: yearly
+
+# sensor.docker_machine_todays_power
+docker_machine_energy_daily:  
+  source: sensor.docker_machine_todays_power
+  cycle: daily
+docker_machine_energy_weekly:  
+  source: sensor.docker_machine_todays_power
+  cycle: weekly
+docker_machine_energy_monthly:  
+  source: sensor.docker_machine_todays_power
+  cycle: monthly
+docker_machine_energy_yearly:  
+  source: sensor.docker_machine_todays_power
+  cycle: yearly
+
+# sensor.filtro_de_linha_varanda_todays_power
+filtro_de_linha_varanda_energy_daily:  
+  source: sensor.filtro_de_linha_varanda_todays_power
+  cycle: daily
+filtro_de_linha_varanda_energy_weekly:  
+  source: sensor.filtro_de_linha_varanda_todays_power
+  cycle: weekly
+filtro_de_linha_varanda_energy_monthly:  
+  source: sensor.filtro_de_linha_varanda_todays_power
+  cycle: monthly
+filtro_de_linha_varanda_energy_yearly:  
+  source: sensor.filtro_de_linha_varanda_todays_power
+  cycle: yearly
+
+# sensor.filtro_de_linha_cozinha_todays_power
+filtro_de_linha_cozinha_energy_daily:  
+  source: sensor.filtro_de_linha_cozinha_todays_power
+  cycle: daily
+filtro_de_linha_cozinha_energy_weekly:  
+  source: sensor.filtro_de_linha_cozinha_todays_power
+  cycle: weekly
+filtro_de_linha_cozinha_energy_monthly:  
+  source: sensor.filtro_de_linha_cozinha_todays_power
+  cycle: monthly
+filtro_de_linha_cozinha_energy_yearly:  
+  source: sensor.filtro_de_linha_cozinha_todays_power
+  cycle: yearly

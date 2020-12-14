@@ -1,0 +1,70 @@
+      name: Demo Floorplan
+      image: /local/custom_ui/floorplan/floorplan.svg
+      stylesheet: /local/custom_ui/floorplan/floorplan.css
+           
+      last_motion_entity: sensor.template_last_motion
+      last_motion_class: last-motion
+
+      groups:
+
+        - name: Lights
+          entities:
+              - light.luz_garagem  
+              - light.luz_quarto_visitas
+              - light.luz_quarto_arthur  
+              - light.abajur_quarto_arthur  
+              - light.luz_sala   
+              - light.luz_quarto_marlene   
+              - light.luz_copa   
+              - light.luz_banheiro
+              - light.luz_banheiro_marlene  
+              - light.luz_banheiro_marlene_espelho
+              - light.luz_lavanderia  
+              - light.luz_cozinha   
+              - light.luz_despensa
+              - light.luz_escritorio  
+              - light.refletor_quintal   
+              - light.luz_varanda     
+              - light.spots_varanda                
+              - light.refletor_corredor 
+          states:
+            - state: 'on'
+              class: 'light-on'
+            - state: 'off'
+              class: 'light-off'
+          action:
+            domain: homeassistant   
+            service: toggle
+
+        - name: Switches
+          entities:
+            - switch.filtro_de_linha_tv_sala
+            - switch.filtro_de_linha_video_games   
+            - switch.filtro_de_linha_pc_marlene
+            - switch.filtro_de_linha_tv_marlene
+            - switch.filtro_de_linha_tv_arthur
+            - switch.filtro_de_linha_pc_arthur
+            - switch.filtro_de_linha_pc_escritorio
+            - switch.filtro_de_linha_extra_escritorio      
+          states:
+            - state: 'on'
+              class: 'switches-on'
+            - state: 'off'
+              class: 'switches-off'
+          action:
+            domain: homeassistant   
+            service: toggle              
+
+        - name: Cameras
+          entities:
+            - camera.cam_01
+            - camera.cam_02
+            - camera.cam_03
+            - camera.cam_04
+            - camera.cam_05
+            - camera.cam_06
+            - camera.cam_07
+            - camera.cam_08
+          states:
+            - state: 'idle'
+              class: 'camera-idle'

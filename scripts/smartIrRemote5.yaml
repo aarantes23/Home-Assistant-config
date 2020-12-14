@@ -1,0 +1,109 @@
+smartirremote5_philips_tv_power:
+  alias: smartirremote5_philips_tv_power
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret philips_tv_power
+        topic: cmnd/SmartIrRemote5/irSend
+        qos: 2
+        retain: true
+
+smartirremote5_philips_tv_volume_up:
+  alias: smartirremote5_philips_tv_volume_up
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret philips_tv_volume_up
+        topic: cmnd/SmartIrRemote5/irSend
+        qos: 2
+        retain: true
+
+smartirremote5_philips_tv_volume_down:
+  alias: smartirremote5_philips_tv_volume_down
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret philips_tv_volume_down
+        topic: cmnd/SmartIrRemote5/irSend
+        qos: 2
+        retain: true
+
+smartirremote5_philips_tv_volume_mute:
+  alias: smartirremote5_philips_tv_volume_mute
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret philips_tv_volume_mute
+        topic: cmnd/SmartIrRemote5/irSend
+        qos: 2
+        retain: true
+
+smartirremote5_philips_tv_ok:
+  alias: smartirremote5_philips_tv_ok
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret philips_tv_ok
+        topic: cmnd/SmartIrRemote5/irSend
+        qos: 2
+        retain: true
+
+smartirremote5_philips_tv_up:
+  alias: smartirremote5_philips_tv_up
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret philips_tv_up
+        topic: cmnd/SmartIrRemote5/irSend
+        qos: 2
+        retain: true
+
+smartirremote5_philips_tv_down:
+  alias: smartirremote5_philips_tv_down
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret philips_tv_down
+        topic: cmnd/SmartIrRemote5/irSend
+        qos: 2
+        retain: true
+
+smartirremote5_philips_tv_left:
+  alias: smartirremote5_philips_tv_left
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret philips_tv_left
+        topic: cmnd/SmartIrRemote5/irSend
+        qos: 2
+        retain: true
+
+smartirremote5_philips_tv_right:
+  alias: smartirremote5_philips_tv_right
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret philips_tv_right
+        topic: cmnd/SmartIrRemote5/irSend
+        qos: 2
+        retain: true
+
+smartirremote5_philips_tv_back:
+  alias: smartirremote5_philips_tv_back
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret philips_tv_back
+        topic: cmnd/SmartIrRemote5/irSend
+        qos: 2
+        retain: true
+
+smartirremote5_philips_tv_source:
+  alias: smartirremote5_philips_tv_source
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret philips_tv_source
+        topic: cmnd/SmartIrRemote5/irSend
+        qos: 2
+        retain: true

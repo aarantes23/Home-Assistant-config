@@ -1,0 +1,9 @@
+domains:
+  - sensor
+  - binary_sensor
+  - light  
+  - switch   
+  - utility_meter
+  - automation 
+entities:
+  - sun.sun

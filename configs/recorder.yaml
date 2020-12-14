@@ -1,0 +1,17 @@
+db_url: !secret db_url
+
+db_max_retries: 10 
+
+db_retry_wait: 3
+
+db_integrity_check: true
+
+auto_purge: true
+
+purge_keep_days: 30
+
+commit_interval: 30
+
+exclude: !include logs_exclude.yaml
+
+include: !include logs_include.yaml

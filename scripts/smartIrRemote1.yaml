@@ -1,0 +1,601 @@
+smartirremote1_samsung_tv_power:
+  alias: smartirremote1_samsung_tv_power
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret samsung_tv_power
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_samsung_tv_volume_up:
+  alias: smartirremote1_samsung_tv_volume_up
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret samsung_tv_volume_up
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_samsung_tv_volume_down:
+  alias: smartirremote1_samsung_tv_volume_down
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret samsung_tv_volume_down
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_samsung_tv_home:
+  alias: smartirremote1_samsung_tv_home
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret samsung_tv_home
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_samsung_tv_back:
+  alias: smartirremote1_samsung_tv_back
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret samsung_tv_back
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_samsung_tv_play:
+  alias: smartirremote1_samsung_tv_play
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret samsung_tv_play
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_samsung_tv_confirm:
+  alias: smartirremote1_samsung_tv_confirm
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret samsung_tv_confirm
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_samsung_tv_up:
+  alias: smartirremote1_samsung_tv_up
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret samsung_tv_up
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_samsung_tv_down:
+  alias: smartirremote1_samsung_tv_down
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret samsung_tv_down
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_samsung_tv_right:
+  alias: smartirremote1_samsung_tv_right
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret samsung_tv_right
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_samsung_tv_left:
+  alias: smartirremote1_samsung_tv_left
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret samsung_tv_left
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_samsung_home_theater_power:
+  alias: smartirremote1_samsung_home_theater_power
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret samsung_home_theater_power
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_samsung_home_theater_source:
+  alias: smartirremote1_samsung_home_theater_source
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret samsung_home_theater_source
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_samsung_home_theater_volume_up:
+  alias: smartirremote1_samsung_home_theater_volume_up
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret samsung_home_theater_volume_up
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_samsung_home_theater_volume_down:
+  alias: smartirremote1_samsung_home_theater_volume_down
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret samsung_home_theater_volume_down
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_samsung_home_theater_volume_mute:
+  alias: smartirremote1_samsung_home_theater_volume_mute
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret samsung_home_theater_volume_mute
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_power:
+  alias: smartirremote1_oitv_power
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_power
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_vod:
+  alias: smartirremote1_oitv_vod
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_vod
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_app:
+  alias: smartirremote1_oitv_app
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_app
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_dvr:
+  alias: smartirremote1_oitv_dvr
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_dvr
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+
+smartirremote1_oitv_1:
+  alias: smartirremote1_oitv_1
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_1
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_2:
+  alias: smartirremote1_oitv_2
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_2
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_3:
+  alias: smartirremote1_oitv_3
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_3
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_4:
+  alias: smartirremote1_oitv_4
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_4
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_5:
+  alias: smartirremote1_oitv_5
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_5
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_6:
+  alias: smartirremote1_oitv_6
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_6
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_7:
+  alias: smartirremote1_oitv_7
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_7
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_8:
+  alias: smartirremote1_oitv_8
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_8
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_9:
+  alias: smartirremote1_oitv_9
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_9
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_0:
+  alias: smartirremote1_oitv_0
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_0
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_legends:
+  alias: smartirremote1_oitv_legends
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_legends
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_audio:
+  alias: smartirremote1_oitv_audio
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_audio
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_menu:
+  alias: smartirremote1_oitv_menu
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_menu
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_guide:
+  alias: smartirremote1_oitv_guide
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_guide
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_ok:
+  alias: smartirremote1_oitv_ok
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_ok
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+
+smartirremote1_oitv_up:
+  alias: smartirremote1_oitv_up
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_up
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_left:
+  alias: smartirremote1_oitv_left
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_left
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_right:
+  alias: smartirremote1_oitv_right
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_right
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_down:
+  alias: smartirremote1_oitv_down
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_down
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_oi:
+  alias: smartirremote1_oitv_oi
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_oi
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_exit:
+  alias: smartirremote1_oitv_exit
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_exit
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_info:
+  alias: smartirremote1_oitv_info
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_info
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_last_channel:
+  alias: smartirremote1_oitv_last_channel
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_last_channel
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_mute:
+  alias: smartirremote1_oitv_mute
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_mute
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_volume_up:
+  alias: smartirremote1_oitv_volume_up
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_volume_up
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_volume_down:
+  alias: smartirremote1_oitv_volume_down
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_volume_down
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_channel_up:
+  alias: smartirremote1_oitv_channel_up
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_channel_up
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_channel_down:
+  alias: smartirremote1_oitv_channel_down
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_channel_down
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_rew:
+  alias: smartirremote1_oitv_rew
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_rew
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_stop:
+  alias: smartirremote1_oitv_stop
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_stop
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_play:
+  alias: smartirremote1_oitv_play
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_play
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_fwd:
+  alias: smartirremote1_oitv_fwd
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_fwd
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_back:
+  alias: smartirremote1_oitv_back
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_back
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_rec:
+  alias: smartirremote1_oitv_rec
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_rec
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_pause:
+  alias: smartirremote1_oitv_pause
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_pause
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_jump:
+  alias: smartirremote1_oitv_jump
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_jump
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_red:
+  alias: smartirremote1_oitv_red
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_red
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_green:
+  alias: smartirremote1_oitv_green
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_green
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_yellow:
+  alias: smartirremote1_oitv_yellow
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_yellow
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true
+
+smartirremote1_oitv_blue:
+  alias: smartirremote1_oitv_blue
+  sequence:
+    - service: mqtt.publish
+      data:        
+        payload_template: !secret oitv_blue
+        topic: cmnd/SmartIrRemote1/irSend
+        qos: 2
+        retain: true

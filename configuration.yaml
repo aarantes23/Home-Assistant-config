@@ -1,0 +1,43 @@
+default_config:
+automation: !include automations/automation.yaml
+frontend: !include configs/frontend.yaml
+history: !include configs/logbook_history.yaml
+recorder: !include configs/recorder.yaml
+input_boolean: !include inputs/boolean.yaml
+logbook: !include configs/logbook_history.yaml
+script: !include_dir_merge_named scripts/
+weather: !include configs/weather.yaml
+map:
+mobile_app:
+sun:
+system_health:
+updater:
+discovery:
+ios:
+
+http:
+  ssl_certificate: !secret ssl_certificate
+  ssl_key: !secret ssl_key
+
+lovelace:
+  mode: yaml
+
+homeassistant:
+  name: Home
+  latitude: !secret latitude
+  longitude: !secret longitude
+  time_zone: !secret time_zone
+  elevation: !secret elevation
+  unit_system: metric
+  external_url: !secret url
+  auth_providers:
+    - type: homeassistant
+
+group: !include configs/groups.yaml
+binary_sensor: !include binary_sensors/binary_sensors.yaml
+light: !include devices/lights.yaml
+camera: !include devices/cameras.yaml
+switch: !include devices/switchs.yaml
+sensor: !include_dir_merge_list sensors/
+utility_meter: !include utility_meters/smart_plugs_energy.yaml
+alexa: !include cloud_configs/alexa.yaml

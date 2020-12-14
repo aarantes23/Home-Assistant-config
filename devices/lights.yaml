@@ -1,0 +1,259 @@
+# light.luz_garagem
+- platform: mqtt
+  unique_id: light.luz_garagem
+  name: "Luz Garagem"
+  state_topic: "stat/Mini1/POWER"
+  command_topic: "cmnd/Mini1/POWER"
+  availability_topic: "tele/Mini1/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+
+# light.luz_quarto_visitas
+- platform: mqtt
+  unique_id: light.luz_quarto_visitas
+  name: "Luz Quarto Visitas"
+  state_topic: "stat/Mini2/POWER"
+  command_topic: "cmnd/Mini2/POWER"
+  availability_topic: "tele/Mini2/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+
+# light.luz_quarto_arthur
+- platform: mqtt
+  unique_id: light.luz_quarto_arthur
+  name: "Luz Quarto Arthur"
+  state_topic: "stat/Mini3/POWER"
+  command_topic: "cmnd/Mini3/POWER"
+  availability_topic: "tele/Mini3/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+
+# light.luz_sala
+- platform: mqtt
+  unique_id: light.luz_sala
+  name: "Luz Sala"
+  state_topic: "stat/Mini4/POWER"
+  command_topic: "cmnd/Mini4/POWER"
+  availability_topic: "tele/Mini4/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+
+# light.luz_quarto_marlene
+- platform: mqtt
+  unique_id: light.luz_quarto_marlene
+  name: "Luz Quarto Marlene"
+  state_topic: "stat/Mini5/POWER"
+  command_topic: "cmnd/Mini5/POWER"
+  availability_topic: "tele/Mini5/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+
+# light.luz_copa
+- platform: mqtt
+  unique_id: light.luz_copa
+  name: "Luz Copa"
+  state_topic: "stat/Mini6/POWER"
+  command_topic: "cmnd/Mini6/POWER"
+  availability_topic: "tele/Mini6/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+
+# light.luz_lavanderia
+- platform: mqtt
+  unique_id: light.luz_lavanderia
+  name: "Luz Lavanderia"
+  state_topic: "stat/Mini7/POWER"
+  command_topic: "cmnd/Mini7/POWER"
+  availability_topic: "tele/Mini7/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+
+# light.luz_cozinha
+- platform: mqtt
+  unique_id: light.luz_cozinha
+  name: "Luz Cozinha"
+  state_topic: "stat/Mini8/POWER"
+  command_topic: "cmnd/Mini8/POWER"
+  availability_topic: "tele/Mini8/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+
+# light.luz_escritorio
+- platform: mqtt
+  unique_id: light.luz_escritorio
+  name: "Luz Escritorio"
+  state_topic: "stat/Mini9/POWER"
+  command_topic: "cmnd/Mini9/POWER"
+  availability_topic: "tele/Mini9/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+
+# light.refletor_quintal
+- platform: mqtt
+  unique_id: light.refletor_quintal
+  name: "Refletor Quintal"
+  state_topic: "stat/Mini10/POWER"
+  command_topic: "cmnd/Mini10/POWER"
+  availability_topic: "tele/Mini10/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+
+# light.spots_varanda
+- platform: mqtt
+  unique_id: light.spots_varanda
+  name: "Spots Varanda"
+  state_topic: "stat/Mini11/POWER"
+  command_topic: "cmnd/Mini11/POWER"
+  availability_topic: "tele/Mini11/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+
+# light.luz_despensa
+- platform: mqtt
+  unique_id: light.luz_despensa
+  name: "Luz Despensa"
+  state_topic: "stat/Mini12/POWER"
+  command_topic: "cmnd/Mini12/POWER"
+  availability_topic: "tele/Mini12/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+
+# light.refletor_corredor
+- platform: mqtt
+  unique_id: light.refletor_corredor
+  name: "Refletor Corredor"
+  state_topic: "stat/Mini13/POWER"
+  command_topic: "cmnd/Mini13/POWER"
+  availability_topic: "tele/Mini13/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+
+# light.luz_varanda
+- platform: mqtt
+  unique_id: light.luz_varanda
+  name: "Luz Varanda"
+  state_topic: "stat/Mini14/POWER"
+  command_topic: "cmnd/Mini14/POWER"
+  availability_topic: "tele/Mini14/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+
+# light.luz_banheiro
+- platform: mqtt
+  unique_id: light.luz_banheiro
+  name: "Luz Banheiro"
+  state_topic: "stat/Mini15/POWER"
+  command_topic: "cmnd/Mini15/POWER"
+  availability_topic: "tele/Mini15/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+
+# light.luz_banheiro_marlene_espelho
+- platform: mqtt
+  unique_id: light.luz_banheiro_marlene_espelho
+  name: "Luz Banheiro Marlene Espelho"
+  state_topic: "stat/Mini16/POWER"
+  command_topic: "cmnd/Mini16/POWER"
+  availability_topic: "tele/Mini16/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+
+# light.luz_banheiro_marlene
+- platform: mqtt
+  unique_id: light.luz_banheiro_marlene
+  name: "Luz Banheiro Marlene"
+  state_topic: "stat/Mini17/POWER"
+  command_topic: "cmnd/Mini17/POWER"
+  availability_topic: "tele/Mini17/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline" 
+
+# light.abajur_quarto_arthur
+- platform: mqtt
+  unique_id: light.abajur_quarto_arthur
+  name: "Abajur Quarto Arthur"
+  state_topic: "stat/Basic1/POWER"
+  command_topic: "cmnd/Basic1/POWER"
+  availability_topic: "tele/Basic1/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline" 
+
+# light.abajur_quarto_marlene_1
+- platform: mqtt
+  unique_id: light.abajur_quarto_marlene_1
+  name: "Abajur Quarto Marlene - 1"
+  state_topic: "stat/Basic2/POWER"
+  command_topic: "cmnd/Basic2/POWER"
+  availability_topic: "tele/Basic2/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline" 
+
+# light.abajur_quarto_marlene_2
+- platform: mqtt
+  unique_id: light.abajur_quarto_marlene_2
+  name: "Abajur Quarto Marlene - 2"
+  state_topic: "stat/Basic3/POWER"
+  command_topic: "cmnd/Basic3/POWER"
+  availability_topic: "tele/Basic3/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
