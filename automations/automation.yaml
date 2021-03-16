@@ -103,6 +103,6 @@
       from: 'off'
       to: 'on'
   action:
-    - service: notify.notify
+    - service: notify.mobile_app_arthurs_iphone
       data:
         message: "Home Assistant {{ state_attr('binary_sensor.updater', 'newest_version') }} is available."

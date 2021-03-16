@@ -235,3 +235,16 @@
   payload_available: "Online"
   payload_not_available: "Offline"
   icon: mdi:power-socket
+
+# switch.cluster_fans
+- platform: mqtt
+  unique_id: switch.cluster_fans
+  name: "Cluster Fans"
+  state_topic: "stat/Basic4/POWER"
+  command_topic: "cmnd/Basic4/POWER"
+  availability_topic: "tele/Basic4/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"  

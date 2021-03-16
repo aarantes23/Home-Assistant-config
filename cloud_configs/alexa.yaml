@@ -1,4 +1,7 @@
 smart_home:
+  client_id: !secret amazon_client_id
+  client_secret: amazon_client_secret
+  endpoint: https://api.amazonalexa.com/v3/events
   filter:
       include_domains:
         - light        

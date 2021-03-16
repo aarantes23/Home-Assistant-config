@@ -6,7 +6,7 @@
 
 - platform: radarr
   api_key: !secret radarr_api_key
-  host: !secret docker_machine
+  host: !secret radarr_host
   port: !secret radarr_port 
   monitored_conditions: 
      - upcoming
@@ -18,7 +18,7 @@
 
 - platform: radarr_upcoming_media
   api_key: !secret radarr_api_key
-  host: !secret docker_machine
+  host: !secret radarr_host
   port: !secret radarr_port 
   days: 120
   theaters: false
@@ -26,13 +26,13 @@
 
 - platform: sonarr_upcoming_media
   api_key: !secret sonarr_api_key
-  host: !secret docker_machine
+  host: !secret sonarr_host
   port: !secret sonarr_port
   days: 7
   max: 10
 
 - platform: tautulli
   api_key: !secret tautulli_api_key
-  host: !secret url
+  host: !secret tautulli_host
   port: !secret tautulli_port  
   ssl: True

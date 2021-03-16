@@ -71,7 +71,8 @@ views:
             - switch.cameras
             - switch.dvr
             - switch.seagate_nas
-            - switch.docker_machine
+            # - switch.docker_machine
+            - switch.cluster_fans
         card:
           type: glance             
       - type: entities                
@@ -946,6 +947,27 @@ views:
           action: call-service
           service: script.smartirremote5_philips_tv_left 
 
+  - title: Media Players
+    theme: dark-mode
+    icon: mdi:cast    
+    cards:
+      - type: vertical-stack
+        title: Apple Tv Quarto Arthur 
+        cards:         
+          - type: entities
+            entities:
+              - remote.apple_tv_quarto_arthur
+          - type: media-control
+            entity: media_player.apple_tv_quarto_arthur
+      - type: vertical-stack
+        title: Apple Tv Sala 
+        cards:         
+          - type: entities
+            entities:
+              - remote.apple_tv_sala
+          - type: media-control
+            entity: media_player.apple_tv_sala
+
   - title: Weather 
     icon: mdi:weather-partly-cloudy
     cards:
@@ -1018,7 +1040,19 @@ views:
         max: 5       
         image_style: poster
         hide_empty: true  
-
+      - type: entities
+        title: Dream-Machine Pro
+        entities:
+          - sensor.unifi_dream_machine_b_received
+          - sensor.unifi_dream_machine_b_sent
+          - sensor.unifi_dream_machine_kib_s_received
+          - sensor.unifi_dream_machine_kib_s_sent
+          - sensor.unifi_dream_machine_packets_received
+          - sensor.unifi_dream_machine_packets_sent
+          - sensor.unifi_dream_machine_packets_s_received
+          - sensor.unifi_dream_machine_packets_s_sent
+        card:
+          type: glance              
       - type: entities                
         title: Printer
         show_header_toggle: false
@@ -1036,7 +1070,6 @@ views:
         title: Certificates
         show_header_toggle: false
         entities:
-          - sensor.cert_expiry
           - sensor.cert_expiry_timestamp
         card:
           type: glance                 
