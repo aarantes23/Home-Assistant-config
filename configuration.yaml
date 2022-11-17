@@ -1,5 +1,5 @@
 default_config:
-automation: !include automations/automation.yaml
+automation: !include automation.yaml
 frontend: !include configs/frontend.yaml
 history: !include configs/logbook_history.yaml
 recorder: !include configs/recorder.yaml
@@ -11,7 +11,7 @@ map:
 mobile_app:
 sun:
 system_health:
-updater:
+#updater:
 discovery:
 ios:
 
@@ -33,11 +33,9 @@ homeassistant:
   auth_providers:
     - type: homeassistant
 
+mqtt: !include_dir_merge_list mqtt/
 group: !include configs/groups.yaml
-binary_sensor: !include binary_sensors/binary_sensors.yaml
-light: !include devices/lights.yaml
 camera: !include devices/cameras.yaml
-switch: !include devices/switchs.yaml
 sensor: !include_dir_merge_list sensors/
 utility_meter: !include utility_meters/smart_plugs_energy.yaml
 alexa: !include cloud_configs/alexa.yaml

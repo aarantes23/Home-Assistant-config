@@ -1,32 +1,32 @@
 - platform: generic
-  name: CAM 01    
+  name: CAM 01
   stream_source: !secret url_stream_cam_01
   still_image_url: !secret url_still_image_00
 - platform: generic
-  name: CAM 02    
+  name: CAM 02
   stream_source: !secret url_stream_cam_02
   still_image_url: !secret url_still_image_00
 - platform: generic
-  name: CAM 03    
+  name: CAM 03
   stream_source: !secret url_stream_cam_03
   still_image_url: !secret url_still_image_00
 - platform: generic
-  name: CAM 04    
+  name: CAM 04
   stream_source: !secret url_stream_cam_04
   still_image_url: !secret url_still_image_00
 - platform: generic
-  name: CAM 05    
+  name: CAM 05
   stream_source: !secret url_stream_cam_05
   still_image_url: !secret url_still_image_00
 - platform: generic
-  name: CAM 06    
+  name: CAM 06
   stream_source: !secret url_stream_cam_06
   still_image_url: !secret url_still_image_00
 - platform: generic
-  name: CAM 07    
+  name: CAM 07
   stream_source: !secret url_stream_cam_07
   still_image_url: !secret url_still_image_00
 - platform: generic
-  name: CAM 08    
+  name: CAM 08
   stream_source: !secret url_stream_cam_08
   still_image_url: !secret url_still_image_00

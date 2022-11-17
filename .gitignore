@@ -2,7 +2,7 @@
 secrets.yaml
 
 # Logs and extra configs
-home-assistant.log
+home-assistant.log*
 *.db*
 .HA_VERSION
 .spotify-token-cache

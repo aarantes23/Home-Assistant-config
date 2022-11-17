@@ -1,18 +1,18 @@
 smart_home:
   client_id: !secret amazon_client_id
-  client_secret: amazon_client_secret
+  client_secret: !secret amazon_client_secret
   endpoint: https://api.amazonalexa.com/v3/events
   filter:
-      include_domains:
-        - light        
-        - switch  
-        - camera
-      #exclude_entities:                     
+    include_domains:
+      - light
+      - switch
+      - camera
+    #exclude_entities:
   entity_config:
     light.abajur_quarto_marlene_1:
       name: Abajur Esquerda
     light.abajur_quarto_marlene_2:
-      name: Abajur Direita      
+      name: Abajur Direita
     switch.ventiladorr:
       name: Ventilador Quarto Arthur
       display_categories: FAN
@@ -23,35 +23,35 @@ smart_home:
       name: Tomada Video Games Sala
       display_categories: SMARTPLUG
     switch.filtro_de_linha_pc_marlene:
-      name: Tomada do PC da Marlene 
+      name: Tomada do PC da Marlene
       display_categories: SMARTPLUG
     switch.filtro_de_linha_tv_marlene:
-      name: Tomada da TV da Marlene 
+      name: Tomada da TV da Marlene
       display_categories: SMARTPLUG
     switch.filtro_de_linha_tv_arthur:
       name: Tomada da TV do Arthur
-      display_categories: SMARTPLUG    
+      display_categories: SMARTPLUG
     switch.filtro_de_linha_pc_arthur:
       name: Tomada do PC do Arthur
-      display_categories: SMARTPLUG    
+      display_categories: SMARTPLUG
     switch.filtro_de_linha_pc_escritorio:
       name: Tomada do PC do Escritório
-      display_categories: SMARTPLUG    
+      display_categories: SMARTPLUG
     switch.filtro_de_linha_extra_escritorio:
       name: Tomada Extra do Escritório
-      display_categories: SMARTPLUG    
-    switch.impressora:              
+      display_categories: SMARTPLUG
+    switch.impressora:
       name: Tomada da Impressora
-      display_categories: SMARTPLUG                                                          
+      display_categories: SMARTPLUG
     switch.monitor:
       name: Tomada do Monitor
-      display_categories: SMARTPLUG    
+      display_categories: SMARTPLUG
     switch.cameras:
       name: Tomada das Câmeras
-      display_categories: SMARTPLUG    
+      display_categories: SMARTPLUG
     switch.dvr:
       name: Tomada do DVR
-      display_categories: SMARTPLUG        
+      display_categories: SMARTPLUG
     camera.cam_01:
       name: Câmera Rua Esquerda
       display_categories: CAMERA
@@ -75,4 +75,4 @@ smart_home:
       display_categories: CAMERA
     camera.cam_08:
       name: Câmera Portão
-      display_categories: CAMERA    
+      display_categories: CAMERA
